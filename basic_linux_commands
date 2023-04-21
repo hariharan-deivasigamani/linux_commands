@@ -1,0 +1,1406 @@
+#commands
+#list directories or files
+ls
+
+#make directory
+mkdir
+
+#remove or delete directory
+rmdir 
+rm -r
+
+#rename files
+mv file01.txt file02.txt
+
+#copying one file to another file
+cp file01.txt file02.txt
+
+#remove or delete files 
+rm file.txt
+rm *.txt
+rm *
+
+#maximize or minimize the current screen
+wmctrl -r ':ACTIVE:' -b toggle,fullscreen
+
+#print standard output
+cat file.txt
+
+#print multiple files  standart output
+cat file01.txt file02.txt
+
+#append one file to another file 
+cat file01.txt>>file.txt
+
+#create files
+touch file.txt
+cat > file.txt
+
+#date and time 
+date
+
+#calendor
+cal 
+cal 2001
+cal 2019
+cal 12 2020
+
+
+#change directory 
+cd
+cd ~
+cd /
+cs-
+cd ..
+
+#present working directory 
+pwd
+
+#list harware
+lshw
+
+#list harddisk
+fdisk -l
+
+#list cpu
+lscpu
+cat /proc/cpuinfo
+
+#ram used and free
+free
+
+#system information
+screenfetch
+
+#memory usage
+cat /proc/meminfo
+vmstat
+top
+htop
+
+#operating system name 
+uname
+unmae -a
+uname -r
+uname -s
+uname -v
+
+#access read write and execute
+chmod o=rwe,g=rw,o=r file.txt
+chmod 766 file.txt
+chmod -x file.txt
+chmod +x file.txt
+
+#suod privilages
+sudo 
+
+#change root user
+su -
+
+#list history
+history
+
+#permantely delete all history 
+history -c
+
+#clear the screen
+cltr+l
+clear
+
+#your own name to command
+alias cls=clear
+alias ubuntudetails=screenfetch
+
+#check sorted by files in line by line
+comm file01.txt file02.txt
+comm -12 file01.txt file02.txt
+
+#check no of bytes in a file
+cksum filename
+
+#compare two file byte by byte
+cmp file01.txt file02.txt 
+
+#Usage of disk
+df
+
+#list the directories
+dir
+
+#compare files by line by line
+diff -n file01.txt file02.txt
+
+#Estimate file space usage
+du
+
+#convert and copy of file
+dd if=/dev/sda of=/dev/sdb
+
+#Run a program in modified environment
+env 
+env -0
+env -i /bin/sh
+
+#Display the line by text
+echo "I am selvaraj"
+
+#Cause the program termination
+exit
+
+#Evaluate Experssions
+variable=`expr $variable + 1`
+i=`expr $i +1`
+
+#Eject removable media
+eject -h
+eject -v
+
+#mkdir mutiple directories
+mkdir -p selva/selva{1..100}
+mkdir -p selva/file{1..2}no{1..10}.odt
+mkdir -p selva/c
+mkdir -p selva/{linux,windows,unix}
+
+#rmdir mutiple directories
+rmdir -p selva/selva{1..100}
+rmdir -p selva/file{1..2}no{1..10}.odt
+rmdir -p selva/c
+rmdir -p selva/{linux,windows,unix}
+
+#prints current day
+(date +%A)
+
+#prints prime factors of given number
+factor 100
+factor 221
+factor 10
+
+#search file in the directory hierarchy
+find ./Documents -name s.txt
+find ./Downloads -name -perm 664
+find ./c -empty
+find . -name selva.txt
+find /home -name index.html
+find / -type d -name git
+find . -type f -name "*.asm"
+find . -type f -perm 0777 -print
+find . -type f ! -perm 0777 -print
+find / -perm /u=s
+find / -perm  /g=s
+find / -perm /u=r
+find / -perm /u=x
+find / -atime 50
+find / -mtime +50 -mtime -100
+find / -cmin -60
+find / -mmin -60
+find / -amin -60
+find / -size 50M
+
+
+#Display free sapce of memory and usage of memory
+free -h
+free
+
+#print the groups
+groups
+groups selvaraj
+groups root
+
+#gzip commnads
+gzip  -v selva.txt
+
+#gunzip commands 
+gunzip selva.txt.gz
+
+#output the first part of 10 lines
+head file.txt
+head -n a  file.c
+
+#show are set systems hostname
+hostname
+
+private ip address
+hostname -I
+
+#control the system hostname and system information
+hostnamectl
+
+#time clocks utility
+sudo hwclock
+sudo hwclock -r
+sudo hwclock --adjust
+
+#probe the hardware
+hwinfo
+hwinfo --short
+hwinfo --disk
+hwinfo --debug
+
+#print large banner 
+banner selvaraj
+banner linux
+
+#print real and effective user and group IDs
+id
+
+#configure the network interfaces
+ifconfig
+
+#show and manipiulate routing ,network devices,interfaces and tunnels
+ip -help
+#manage and display newtwork interfaces
+ip link help
+#Get network interface information
+ip link show
+ip -s link
+ip link ls up
+#moniter and manage ip addresses
+ip addr help
+#monitor ip addresses
+ip addr
+ip addr show
+ip -4 addr
+ip -6 addr
+
+#administration tool for IPv4/IPv6 packet filtering and NAT
+sudo iptables --list
+
+#show / manipulate wireless devices and their configuration
+iw
+
+#Get more detailed wireless information from a wireless inter‐face
+iwlist 
+iwlist power
+iwlist auth
+iwlist genie
+
+#Report Central Processing Unit (CPU) statistics and input/out‐put statistics for devices and partitions.
+iostat
+iostat %drqm
+iostat %user
+iostat %nice
+
+#set or get process I/O scheduling class and priority
+ionice
+ionice --version
+
+#root login
+su -
+sudo su
+sudo su -
+sudo su - root
+
+#change one user to another user 
+sudo su selvaraj
+su selvaraj
+
+#logout root user
+logout
+su - selvaraj
+
+#send Internet Control Message Protocal ECHO_REQUEST to network hosts 
+ping www.google.com
+
+#Query internet and server interactively
+nslookup www.google.com
+
+#manipulate the system Address Resolution Protocal cache
+arp -a
+arp -v
+arp -av
+
+#show / manipulate the IP routing table
+route
+
+#Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+netstat
+
+#kill process by name
+killall -e firefox
+
+#Interactive Spell Checker
+aspell -c file.txt
+
+#Show a listing of last logged users
+last
+lastb
+ 
+#find files from name
+locate file.java
+mlocate  file.sh
+
+#make links between files
+ln file01.txt file02.txt
+ln file01.sh file02.sh
+
+#list USB devices
+lsusb
+lsusb -v
+
+#list of all open files in console
+lsof
+
+#Begin session on the system
+login
+sudo login root
+sudo login -p selvaraj
+login -p
+sudo login -f selvaraj
+
+#Battery percentage
+upower -i /org/freedesktop/UPower/devices/battery_BAT0
+
+#show battery status and Advanced Configuration and power interface
+acpi
+acpi -V
+
+ac adapter information
+acpi -a
+
+#show who logged in and what thay are doing
+w
+
+#file perusal filter for crt viewing
+more s.c
+more file.txt
+
+#run a program with modified scheduling priority
+sudo nice --10 gnome-termianl
+
+#check the port in use
+sudo -i -p -n  | grep LISTEN
+sudo netstat -tulpn | grep LISTEN
+ss -tulw
+
+#print the number of processing units available
+nproc 
+nproc -all
+nproc --help
+nproc --version
+
+#How to open browser in linux oon desktop version
+#Google Chrome open commnad
+google-chrome
+#Mozilla Firefox command
+firefox
+
+#move disks into null and most dangerous command
+mv / /dev/null
+mv ~ /dev/null
+mv /dev/sda /dev/null
+mv /dev/sda1 /dev/null
+
+Delete all the files directories and most dangerous command
+sudo rm -rf /*
+sudo rm -rf *
+
+#repeat the previous command
+!!
+
+#change user password
+passwd
+
+#change the root passwd
+sudo root passwd
+
+#present working directories
+pwd
+
+#find the process ID of a running program
+pidof bash
+pidof -s bash
+pidof -x bash
+pidof -c bash
+pidof -o bash
+pidof chrome
+pidof -s chrome
+pidof -c chrome
+pifof -x chrome
+
+#to find pid on pidof command and to kill the process on kill command
+p=$(pidof chrome)
+kill $p
+
+#report the snapshot of the current processces
+ps
+
+#dispaly a tree of processes
+pstree 
+pstree -a `pgrep ssh`
+
+#reboot the machine
+reboot
+
+#link between two files
+ln file01.txt file02.txt
+ln s.txt r.txt
+
+#renaming the files
+rename -v 's/txt/docx/' s.txt
+rename -n 's/png/jpeg/' *.png
+rename -V 'files/jpeg/png/' *.jpeg
+
+#local/remote mirror and incremental backup
+rdiff-backup -V
+rdiff-bacup --exclude Desktop/s.txt ./Documents/s.txt.backup
+
+list poweroff system commands
+sudo poweroff
+poweroff
+shutdown -h now
+shutdown -n 1
+shutdown +30 "it will poweroff after 30 minutes"
+shutdown 19.00
+sudo shutdown -h now
+
+#OpenSSH secure file copy
+#local to remote
+scp file.txt selvaraj@10.10.0.2:/remote/selva
+scp file.txt selvaraj@10.10.0.2;/remote/selva/newfile.txt
+scp -P 2322 file.txt selvaraj@10.10.0.2:/remote/selva
+scp -r /local/Documents selvaraj@10.10.0.2:/remote/selva
+#remote to local
+scp selvaraj@10.10.0.2:/remote/file.txt /local/Documents
+#two remote systems
+scp selvaraj@10.10.0.1 :/Documents.file.txt selva@10.10.0.2 :/selva/
+#route the traffic through the machine 
+scp -3 selvaraj@10.10.0.9:/Documents/file.txt selva@10.10.0.1:/selva
+
+#delay the specified amount of time 
+sleep 10s 
+sleep 1m
+sleep 1h
+sleep 1d
+
+#sort lines of text files
+sort file.txt
+sort selva.txt
+#sort lines of text files
+sort file.txt
+sort selva.txt
+#sort lines of text files
+sort file.txt
+sort selva.txt
+sort selva.txt > raj.txt
+sort -o raj.txt selva.txt
+sort -r selva.txt
+sort -n number.txt
+sort -nr number.txt
+sort -k 3i name.txt
+sort -c selva.txt
+sort -u selva.txt
+sort -m months.txt
+
+#checksum and count the blocks in a file
+sum file.txt
+sum -r file.txt
+sum -s file.txt
+
+#split a file into pieces
+split sleva.txt
+split selva.txt selvaraj
+split -l 5 selva.txt selvaraj
+split selva.txt -l 4 --verbose
+split -b 16 selva.txt selva
+split -l 4 -a 4 selva.txt
+split -l 4 -d selva.txt
+split -n 3 selva.txt
+split -l 4 -e selva.txt
+
+#display file or file system status
+stat selva.txt
+stat raj.c
+
+#run a command with substitute user and group ID
+sudo su -
+sudo su selvaraj
+su -
+sudo su selva
+
+#shell types your operating system
+cat /etc/shells
+
+#concatenate and print files in reverse
+tac selva.txt
+tac -b selva.txt raj.txt
+tac -r selva.txt raj.txt
+tac -s selva.txt raj.txt
+tac --help
+
+#output the last part of the lines
+tail selva.txt
+
+#Display Linux processes
+top 
+
+#create empty file
+touch file.txt
+
+#check os versions in linux
+hostnamectl
+lsb_release -a
+cat /etc/*issue
+cat /etc/os-release
+cat /etc/*release
+
+#find linux kernal version
+uname -r
+
+#run programs and summarize system resource usage
+time sleep 5
+time -p sleep 5
+
+#print system information
+uname -a
+uname -s
+uname -n
+uname -r 
+uname -m
+uname -p
+uname -i
+uname -o
+
+#report or omit repeated lines
+uniq file.txt
+uniq -c file.txt
+uniq -d file.txt
+uniq -D file.txt
+uniq -u file.txt
+uniq -f 2 file.txt
+uniq -w 3 file.txt
+uniq -i file.txt
+uniq -z file.txt
+
+#print the user names of users currently logged in to the current host
+users
+
+#Tell how long the system has been running
+uptime
+
+#Domain Name System lookup utility
+dig -v 
+dig google.com
+dig @8.8.8.8 google.com
+
+#output a string repeatedly until killed
+yes
+yes linux
+
+#execute a program periodically, showing output fullscreen
+watch -b free -m
+watch -p free -m
+#quit watch commands
+ctrl+c
+
+#The non-interactive network downloader
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+wget http://www.google.com/google.txt -o /selva/selva.txt
+
+#locate a command
+which bash
+which poweroff
+which man
+which ls
+which rm
+which google-chrome-stable
+
+#show who is logged on
+who
+who -all
+who -r
+who -s
+
+#find server public IP address in curl command
+curl ifconfig.co
+curl ifconfig.me
+curl ifconfig.com
+
+#history commnad
+history
+
+#delete all the history 
+history -c
+
+delete empty directories using find command
+mkdir -p testing/selva{1..4}
+find . -type d -empty -delete
+
+print reverse
+rev
+selvaraj
+
+print kernal and driver messages
+dmesg
+
+#report virtual memory statistics
+vmstat
+
+#continuous digital clock in linux terminal
+watch -t -n 1 date +%T
+
+#commnad line tool for controlling manager
+nmcli
+
+#list available wifi networks
+nmcli device wifi list
+nmcli connection show
+nmcli connection show "BLU R1 HD "
+nmcli dev wifi
+
+#find internet download speed and upload speed 
+curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -
+speedtest
+speedtest-cli
+
+#github commnads
+git push
+git pull
+git init
+git fetch
+git commit -m "Understanding ..."
+git status
+git add file.txt
+git add selva/file.txt
+git commit -a
+#Configuring git
+git config --global user.name "selvaraj-kuppusamy"
+git config --global user.name "your mailid"
+git config --list
+#cloning git
+git clone https://github.com/selvaraj-kuppusamy/linux.git
+
+check kernal version
+dmesg | grep Linux
+
+#user information lookup program
+finger selvaraj
+finger root
+
+#find public IP address
+curl ifconfig.me
+curl api.ipify.org
+curl checkip.dyndns.org
+dig +short myip.opendns.com @resolver1.opendns.com
+host myip.opendns.com resolver1.opendns.com
+curl ident.me
+curl bot.whatismyipaddress.com
+curl ipecho.net/plain
+
+#find private IP address
+ifconfig -a
+hostname -I
+hostname -I | awk '{print $1}'
+ip route  get 1.2.3.4 | awk '{print $7}'
+nmcli -p device show
+
+#show /manipulate routing,network devices,interfaces and tunnels
+ip addr
+ip add
+
+#compile and run java
+javac selva.java
+java selva
+
+#word count 
+#Used for counting - No of words and lines
+wc file.txt
+
+#commnads to monitor users
+who
+last
+w
+finger
+id
+
+#command status or process status
+echo "$?"
+
+#set access privilage in the mkdir command
+mkdir -m=r-- Documents
+mkdir -m=rwx-- Downloads
+mkdir -m=rx-- Music
+mkdir -m=rwx-- selvaraj
+
+#to see system defined variable
+set
+env
+printenv
+
+#Specifies the name of the script to be invoked
+echo "$0"
+
+#total number of aruguments passed the script
+echo "$#"
+
+#stores all the commnad line arguments by joining them together
+echo "$*"
+
+#stores the list of arguments as an array
+echo "$@"
+
+#the process id of the current script
+echo "$?"
+
+#the exit status of the last command or the most recent execution process
+echo "$$"
+
+#Show id of the last background job
+echo "$!"
+
+#creating user or add user
+sudo adduser selvaraj
+sudo adduser selva
+sudo adduser linux
+#set password
+sudo passwd selvaraj
+sudo passwd selva
+sudo passwd linux
+
+#creating groups add groups
+sudo groupadd selva
+sudo groupadd -g 10000 selvaraj
+sudo groupadd -r linux
+sudo groupmod -n selvaraj linux
+sudo groupmod -g 20000 selvaraj
+sudo usermod -g selvaraj linux
+sudo usermod -aG selvaraj selva
+sudo usermod -G selvaraj unix
+sudo groupdel selva
+sudo groupdel linux
+
+#display file or file system status
+stat -c "%a" selva.txt
+
+#chmod commnands or file permission commands
+chmod u=rwx,g=rw,o=r selva.txt
+chmod u=rwx,g=r,o= selva.txt
+chmod a+rwx selva.txt
+chmod a-x selva.txt
+chmod +x selva.txt
+chmod -x selva.txt
+chmod 777 selva.txt
+chmod 655 selva.txt
+chmod 755 selva.txt
+
+#file permission set recursively on the files in the entire directory tree in chmod commands
+chmod -R ugo=rwx Bash/
+chmod -R +x Shellscript/
+chmod -R 777 Zsh/
+
+#changing file and Directory user or Group Ownership
+chown root poweroff.c
+chown -R root C
+chown :selvaraj poweroff.c
+chown root:selvaraj colour.c
+chown selvaraj.root s.c
+chown root.selvaraj colour.c
+chown selvaraj.root s.c
+
+#tar commnads
+tar cvf backup.tar *.c
+tar xvf selva.tar 
+tar cvzf backup.tar.gz *.c
+tar xvfz backup.tar.gz
+tar cbvfj selva.tar.tbz buzzle.cpp
+tar rvf backup *.c'
+tar tvf selva.tar | grep "project_1.c"
+tar tvf backup.tar
+tar tar selva.tar --wildcards '*.png'
+
+#funny commnads in linux
+cowsay -f elephant-in-snake linux is best operting system
+xeyes
+xcowsay i love linux
+cmatrix
+
+#grep commnads
+grep linux selva.txt
+grep redhat selva.txt raj.txt linux.txt
+grep ubuntu *
+grep -w selvaraj *
+grep -i linux *
+grep -r selvaraj *
+
+#enable/disable devices and files for paging and swap‐ping
+swapon
+
+#another utility to investigate sockets
+ss
+
+#tool to take pictures and videos from your webcam
+cheese
+
+#Show the status of modules in the Linux Kernel
+lsmod
+
+#DNS lookup and validation utility
+delv
+
+#run mutiple commmnads in single line
+ls ; w ; date ; pwd ; whoami
+[[ 1 -eq 1 ]] && echo true || echo false
+
+#list block devices
+lsblk
+lsblk -i
+lsblk -J
+lsblk -O
+lsblk -p
+lsblk -P
+lsblk -s
+lsblk -S
+lsblk -a
+lsblk -f
+lsblk -l
+lsblk -m
+lsblk -M
+lsblk -r
+lsblk -t
+lsblk -z
+lsblk -n
+lsblk -V
+ 
+ #make file system
+ mkfs.vfat -F 32 /dev/sdb1
+ mkfs.vfat /dev/sdb1
+ mkfs.ext4 /dev/sdb2
+ mkfs.ntfs /dev/sdc1
+
+#firewalld command line client
+sudo firewall-cmd --get-active-zones
+sudo firewall-cmd --zone corp --list-all
+sudo firewall-cmd --add-service http --permanent
+sudo firewall-cmd --add-service https --permanent
+sudo firewall-cmd --reload
+
+#Listing Hard Drivers in Linux
+df
+sudo fdisk -l
+lsblk
+sudo cfdisk
+sudo parted
+sudo sfdisk -l
+
+#Basic Configuration
+#Control the system locale and keyboard layout settings
+localectl
+
+control the date and time 
+timedatectl
+
+#configure SSH
+sudo vi /etc/ssh/ssh_config
+sudo vi /etc/ssh/sshd_config
+
+#Jobs and Services
+#List all services
+systemctl -at service
+ls /etc/systemd/system/*.service
+ls /usr/lin/systemd/system/*.service
+
+#List services that are Running 
+systemctl -t service --state=active
+
+#Start and stop services
+systemctl start httpd
+systemctl stop httpd
+
+#enable and disable services
+systemctl enable httpd
+systemctl disable httpd
+
+#check service status
+systemctl status enable
+
+#see is a service is enabled
+systemctl is-enabled httpd
+
+#configure logs
+sudo vi /etc/rsyslog.conf
+sudo vi /etc/rsyslog.d/*.conf
+
+#view log files
+sudo vi /var/log journalctl
+
+#create Archive
+tar
+cpio
+
+#Kernal,Boot,Hardware
+#poweroff system
+poweroff
+systemctl poweroff
+
+#Halt system
+halt 
+syetemctl reboot
+
+#Reboot system
+reboot
+systemctl reboot
+
+#configure GRUB
+sudo vi /etc/default/grub
+
+#view kernal Parameters
+sysctl -a
+cat /proc/cmdline
+
+#load kernal module 
+modprobe 
+
+#view kernal version
+rpm -q kernal
+uname -r
+
+#User Management 
+#create user 
+sudo useradd selvaraj
+
+delete user 
+sudo userdel selvaraj
+
+#view or change user details
+usermod -aG selvaraj
+sudo vi /etc/passwd
+sudo vipw
+id
+
+#create user group
+groupadd selvaraj
+
+#delete  user group
+groupdel selvaraj
+
+#change group detalis
+groupmod -a selvaraj
+sudo vi /etc/group
+
+#change user password
+passwd selvaraj
+
+#change user permissions
+sudo visudo
+
+#change password policy
+chage -l selvaraj
+
+#view user sessions
+w
+
+#Files Systems,Volumes And Disks
+fdisk
+gdisk
+parted
+ssm create
+
+#Format Disk Partitions
+mkswap
+
+#check and repair a Linux filesystem 
+fsck
+
+#mount storage
+mount
+sudo vi /etc/fstab
+
+#Defragement Disk Space
+fsck
+
+#Mount and Activate Swap
+sudo vi /etc/fstab
+swapon -a
+
+#view free disk space
+df
+
+#change File permissions
+chmod
+chown
+chgrp
+umask
+
+#change File Attributes
+chattr
+
+#change Access Control list
+setfacl
+
+#Networking 
+
+#Change Name Resolution
+sudo vi /etc/hosts
+sudo vi /etc/resolv.conf
+
+#configure  Hosname
+hostnamectl
+sudo vi /etc/hostname
+
+#View Network Interface Information
+ip addr
+teamctl
+bridge
+
+#view Routes
+ip route
+
+#configure Routes
+ip route add
+
+#Configure Firewall
+firewall-cmd
+
+view ports and sockets
+ss
+lsof
+
+#Security And Identity
+#Configure security system
+sudo vi /etc/selinux/config chcon
+restorecon
+semanage
+setsbool
+
+#LDAP,SSSD
+authconfig
+authconfig-tui
+
+#Network Users
+getent
+
+#Resource Management
+#change process Priority
+nice
+renice
+
+#change process Run Location
+taskset
+
+#kill a process
+kill
+pkill
+
+#view system usage
+top
+ps
+ss
+vmstat
+
+#view disk usage
+df
+
+#Adduser in linux
+adduser selvaraj
+
+#primitive command line interface to RandR extension
+#laptop screen size and monitor resolution
+xrandr
+
+#laptop screen and monitor resolution
+xdpyinfo | grep dimensions
+xdpyinfo | awk '/dimensions/{print $2}'
+xdpyinfo  | grep -oP 'dimensions:\s+\K\S+'
+
+
+#awk commnands
+awk '{print}' linux.html
+awk '/html/ {print}' linux.html
+awk '{print $2}' linux.html
+
+#Runnnig Jobs in the Background
+sleep 1000 &
+jobs
+fg %1
+ps j
+bg %1
+
+#show hardware information from the BIOS
+sudo dmidecode
+
+#Display disk data information
+sudo hdparm -i /dev/sda
+
+#Show PCI devices in a tree-like diagram
+lspci -tv
+
+#Display USB devices in a tree-like diagram
+lsusb -tv
+
+#Find wifi paswords i linux commnand
+sudo grep -r '^psk=' /etc/NetworkManager/system-connections/
+sudo grep psk= /etc/NetworkManager/system-connections/*
+sudo grep -hr '^psk=' /etc/NetworkManager/system-connections/
+
+#Text User Interface for controlling NetworkManager
+nmtui
+
+#Use gui find out battery status on linux
+gnome-power-statistics
+
+#display the list of available wifi networks
+nmcli device wifi list 
+nmcli dev list
+
+#Program to manage Linux Kernel modules
+kmod list
+
+#Display information utility for x
+xdpyinfo
+
+#Funny commands in terminal
+aafire
+
+#view dynamically see the files 
+tail -f selva.txt
+tail -f linux.txt
+
+#interactive process viewer
+htop
+
+#check file details
+stat selva.txt
+
+#Remove with user interactive
+rm -i selva.txt
+
+#chmod commnand to excutable permission
+chmod +x selva.bash
+
+#change the Owner of a file
+chown selvaraj addition.swift
+chown root subtraction.py
+#change the owner of a file with UID
+chown 1005 addition.swift
+#change ownership of Mutiple Linux Files
+chown root selva.c linux.java
+#To change the group of a file
+chown :selvaraj selva.txt
+#change the Group of a file using GID
+chown :1007 linux.txt
+#change Owner and and the group
+chown selvaraj:root linux.c
+
+#How to Mac address and other address
+cat /sys/class/net/enp1s0/address
+cat /sys/class/net/wlp2s0/address
+cat /sys/class/net/lo/address
+cat /sys/class/net/*/address
+ifconfig -a | grep -ioE '([a-z0-9]{2}:){5}..'
+ifconfig -a | awk '/^\w/&&NF==5{print $NF}'
+
+#changing root password
+man sudo root
+
+#list devices
+cat /proc/devices
+
+#list time zones
+timedatectl list-timezones
+
+#date commnands
+date --date="2 days ago"
+
+#list protocols
+cat /etc/protocols
+
+#change user password expiry information
+sudo chage -l selvaraj
+sudo chage -l root
+
+#top commnands
+top
+top -u selvaraj
+top -u root
+
+#mkfs command in linux
+sudo mkfs -t ntfs /dev/sdb1
+sudo mkfs -t ext4 /dev/sdb1
+sudo mkfs -t vfat /dev/sdb1
+
+#To determine mounted filesystems and their types
+df -T
+
+#List out process and relationships
+pstree -AU
+
+#packagement management in use linux distributions
+sudo vi /etc/apt/sources.list
+sudo vi /etc/yum.repos.d 
+
+#Kill commands
+kill -SIGNNULL 3986
+kill -0 3986
+kill -SIGHUP 3986
+kill -1 3986
+kill -SIGINT 3986
+kill -2 3986
+kill -SIGQUIT 3986
+kill -3 3986
+kill -SIGKILL 3986
+kill -9 3986
+kill -SIGTERM 3896
+kill -15 3896
+kill -SIGSTOP 3896
+kill -24 3896
+kill SIGSTP 3896
+kill -25 3896
+kill -SIGCONT 3896
+kill -26 3896
+
+#killall commands
+killall chrome
+killall -SIGSTOP chrome
+killall -SIGCONT chrome
+
+pkill commmands
+pkill -9 chrome
+pkill -1 chrome
+pkill chrome
+pkill -SIGKILL chrome
+
+#xkill commands
+xclients
+xkill
+
+#Find computer architecture
+uname -m
+
+#run a command immune to hangups or with output to non-tty
+nohub cat selva.sh
+nohub ping google.com&
+
+#cut commands
+cut -n 20 selva.txt
+cut -20 selva.txt
+cut -c 20 selva.c
+cut -b 5 selva.txt
+cut -s " " selva.txt
+
+#sort commands
+sort -rn selva.txt
+
+#paste commands
+paste -sd " " selva.txt
+
+#print or control the kernal ring buffer
+dmesg
+
+#Find linux distribution Name and Version
+cat /etc/*-release
+hostnamectl
+
+#awk comments
+awk '{print}' selva.txt
+awk '/linux/{print}' selva.txt
+
+#Nmap commands
+nmap 127.0.0.1
+nmap 127.0.1.1
+
+#Standard terminal emulator of X window system
+sudo apt install xterm 
+xterm
+
+#view saved wifi logins
+sudo grep psk= /etc/NetworkManager/system-connections/*
+
+#find whether command is an alils
+type ss
+type top
+type man
+
+#clear cache in linux
+#clear pagecache
+http://server_domain_or_IP:8080/manager/html
+#clear dentries and inodes
+sync; echo 2 > /proc/sys/vm/drop_caches
+#clear pagecache,dentries and inodes
+sync; echo 3 > /proc/sys/vm/drop_caches
+
+#tee command
+wc -l selva.txt | tee -a raj.txt
+
+#print machine hardware name
+arch
+
+#Find no user
+find / -xdev -nouser
+
+#A network diagnostic tool
+mtr google.com
+
+#print a sequence of numbers
+seq 1 20
+seq 1 10 | shuf
+
+#dump traffic on a network
+tcpdump -i wlp2s0
+
+#Determine file type
+file lamp.sh
+file linux.txt
+file index.html
+
+#DNS lookup utility
+host google.com 
+host www.google.com
+host linux.com
+
+#show a lisiting of last logged in users
+last 
+last selvaraj
+last -a
+last -i
+last -i selvaraj
+
+#type command
+type ls
+type -p ls
+type -t ls
+
+#change directory
+pushd /etc/
+popd
+
+#list the ranges of available memory with their online status
+lsmem
+
+#change file attributes on a Linux file system
+chattr +i demo/
+
+#ext2/3/4 filesystem backup
+rdump -0u -f selvaraj:/dev/nst0 /selva
+
+#Tells whether a cable is plugged in or not
+ifplugstatus
+
+#dump files in octal and other formats
+od s.txt
+od -c s.txt
+od -d s.txt
+
+#shows hardware information from the bios
+dmidecode
+
+#Graphical command and behind the scene
+hollywood
+
+#overwrite a file to hide its contents
+shred selva.txt
+shred -u selva.txt
+
+#soundcard mixer for ALSA soundcard driver, with ncurses interface
+alsamixer
+
+#A fast, highly customizable system info script
+neofetch
+
+#Orphaned package finder
+deborphan
+
+#send a message using smtp
+sendmail selvarajk.19msc@kongu.edu
+
+#sed command
+sed 's/unix/linux/g' selva.txt
+
